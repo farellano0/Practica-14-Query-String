@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/person/:id', (req, res) => {
-    res.render('person', {ID: req.params.id, Qstr: req.query.qrst}); //Necesitamos enviar 2 parámetros, el nombre de la vista que debe “renderizarse” en el motor de vistas y los parámetros que va a recibir, en este caso, un objeto que contiene dos llaves ID y Qstr.
+    res.render('person', { ID: req.params.id, Msg: req.query.msg, Times: req.query.times}); //Recolección de parametros: person, message & times
 });
 
 app.listen(PORT); //levantar el server y ponerlo a la escucha
